@@ -9,7 +9,7 @@
     }
 
     body {
-        background-color: #2e2d38;
+        background-color: black !important;
     }
 
     .todo-title {
