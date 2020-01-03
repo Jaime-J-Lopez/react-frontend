@@ -1,6 +1,6 @@
 import React, { Component } from "react";
-    import Modal from "./components/Modal";
-    import axios from "axios";
+import Modal from "./components/Modal";
+import axios from "axios";
 
     class App extends Component {
       constructor(props) {
@@ -20,7 +20,7 @@ import React, { Component } from "react";
       }
       refreshList = () => {
         axios
-          .get("https://django-react-drf.herokuapp.com//api/bank/")
+          .get("https://django-react-drf.herokuapp.com/api/bank/")
           .then(res => this.setState({ todoList: res.data }))
           .catch(err => console.log(err));
       };
