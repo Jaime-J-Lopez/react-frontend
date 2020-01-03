@@ -37,13 +37,13 @@ import axios from "axios";
               onClick={() => this.displayCompleted(true)}
               className={this.state.viewCompleted ? "active" : ""}
             >
-              complete
+              Bank
             </span>
             <span
               onClick={() => this.displayCompleted(false)}
               className={this.state.viewCompleted ? "" : "active"}
             >
-              Incomplete
+              Accounts
             </span>
           </div>
         );
