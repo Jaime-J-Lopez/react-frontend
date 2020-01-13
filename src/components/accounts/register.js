@@ -3,6 +3,7 @@ import { Link, Redirect } from "react-router-dom";
 import { connect } from "react-redux";
 import PropTypes from "prop-types";
 import { register } from "../../actions/auth";
+
 export class Register extends Component {
     state = {
         username: "",
@@ -13,9 +14,9 @@ export class Register extends Component {
     static propTypes = {
       register: PropTypes.func.isRequired,
       isAuthenticated: PropTypes.bool
-    };
+  };
     componentDidMount() {
-      this.setState({justRegister: false});
+        this.setState({justRegister: false});
     }
     onSubmit = e => {
         e.preventDefault();
@@ -23,7 +24,7 @@ export class Register extends Component {
         const newUser = {
             username,
             password,
-            email,
+            email
         };
         this.props.register(newUser);
         this.setState({justRegister: true});
@@ -89,4 +90,4 @@ export class Register extends Component {
 const mapStateToProps = state => ({
   isAuthenticated: state.auth.isAuthenticated
 });
-export default connect(mapStateToProps, { register })(Register)
+export default connect(mapStateToProps, { register })(Register);
