@@ -3,7 +3,7 @@
 // }
 
 const authReducer = (state, action) => {
-    switch ('action.type') {
+    switch (action.type) {
         case 'ADD_NAME':
             return {
                 ...state,
@@ -18,4 +18,4 @@ const authReducer = (state, action) => {
     }
 }
 
-export default authReducer()
+export default authReducer

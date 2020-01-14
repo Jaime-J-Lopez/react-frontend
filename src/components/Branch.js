@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import axios from "axios";
-import { HashRouter as Router, Route, } from "react-router-dom";
+// import { HashRouter as Router, Route, } from "react-router-dom";
 
     class Branch extends Component {
       constructor(props) {
@@ -115,7 +115,7 @@ import { HashRouter as Router, Route, } from "react-router-dom";
       render() {
         return (
           <main className="content">
-            <h1 className="text-white text-uppercase text-center my-4">Six De Greeze Bank</h1>
+            <h1 className="text-white text-uppercase text-center my-4">Credit Union</h1>
             <div className="row ">
               <div className="col-md-6 col-sm-10 mx-auto p-0">
                 <div className="card p-3">
