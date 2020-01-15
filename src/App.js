@@ -1,6 +1,4 @@
 import React, { Component } from "react";
-// import Modal from "./components/Modal";
-// import axios from "axios";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Branch from './components/Branch';
 import Header from "./components/layout/header";

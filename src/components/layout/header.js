@@ -14,10 +14,7 @@ export class Header extends Component {
   };
   render() {
     const { isAuthenticated, user } = this.props.auth;
-    // const { dispatch } = this.context;
-    // dispatch({
-    //     type: 'ADD_NAME',
-    // });
+
     const authLinks = (
       <ul className="navbar-nav ml-auto mt-2 mt-lg-0">
         <span className="navbar-text mr-3">
