@@ -40,7 +40,7 @@ import React, { Component } from "react";
                     name="title"
                     value={this.state.activeItem.title}
                     onChange={this.handleChange}
-                    placeholder="Enter Todo Title"
+                    placeholder="Enter Title"
                   />
                 </FormGroup>
                 <FormGroup>
@@ -50,7 +50,7 @@ import React, { Component } from "react";
                     name="description"
                     value={this.state.activeItem.description}
                     onChange={this.handleChange}
-                    placeholder="Enter Todo description"
+                    placeholder="Enter description"
                   />
                 </FormGroup>
                 <FormGroup check>
