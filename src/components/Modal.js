@@ -30,7 +30,7 @@ import React, { Component } from "react";
         const { toggle, onSave } = this.props;
         return (
           <Modal isOpen={true} toggle={toggle}>
-            <ModalHeader toggle={toggle}> Customer Information </ModalHeader>
+            <ModalHeader toggle={toggle}>Customer Information</ModalHeader>
             <ModalBody>
               <Form>
                 <FormGroup>

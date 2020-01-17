@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import axios from "axios";
+import { FaHome } from "react-icons/all";
+
 // import { HashRouter as Router, Route, } from "react-router-dom";
 
     class Branch extends Component {
