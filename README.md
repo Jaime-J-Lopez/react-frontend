@@ -1,14 +1,13 @@
 # django.drf.react.bank.project
 
 Backend Heroku deployment
-#### [Backend](https://django-react-drf.herokuapp.com/api/bank/)
+#### [Backend](https://django-react-drf.herokuapp.com/api/)
 
+#### [Backend Repo](https://github.com/geekwise-jaime-lopez/django.drf.react.bank.project/tree/backend.auth)
 Frontend Heroku deployment
 
-#### [Frontend](https://django-react-frontend.herokuapp.com/)
-
-#### Login Info: Username: Demo / Password: Demo123
-
+#### [Frontend](https://django-react-frontend.herokuapp.com/login/)
+#### [Frontend Repo](https://github.com/geekwise-jaime-lopez/react-frontend/tree/frontend.auth)
 #### Build Stack:
 
 #### [React](https://reactjs.org/) Frontend framework 
@@ -28,7 +27,3 @@ Open http://localhost:8000 to view it in the browser.
 #### yarn start
 Local:
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-
-
-
