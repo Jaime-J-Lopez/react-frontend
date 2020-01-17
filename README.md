@@ -7,8 +7,7 @@ Frontend Heroku deployment
 
 #### [Frontend](https://django-react-frontend.herokuapp.com/)
 
-#### Login Info: Username: Demo
-####             Password: Demo123
+#### Login Info: Username: Demo / Password: Demo123
 
 #### Build Stack:
 
