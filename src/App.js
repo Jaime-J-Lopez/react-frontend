@@ -10,6 +10,7 @@ import store from "./store";
 import { loadUser } from './actions/auth';
 import AuthProvider from "./context/authprovider";
 
+
     class App extends Component {
       componentDidMount() {
       store.dispatch(loadUser());
