@@ -9,7 +9,7 @@ import { Provider } from 'react-redux';
 import store from "./store";
 import { loadUser } from './actions/auth';
 import AuthProvider from "./context/authprovider";
-
+import Reset from "./components/accounts/reset";
 
     class App extends Component {
       componentDidMount() {
@@ -26,6 +26,7 @@ import AuthProvider from "./context/authprovider";
                   <PrivateRoute exact path="/branch" component={Branch}/>
                   <Route exact path="/login" component={Login}/>
                   <Route exact path="/register" component={Register}/>
+                  <Route exact path="/reset" component={Reset}/>
                 </Switch>
             </Router>
           </Provider>
