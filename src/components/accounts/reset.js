@@ -5,7 +5,7 @@ import PropTypes from "prop-types";
 import { reset } from "../../actions/auth";
 
 
-export class Reset extends Component {
+class Reset extends Component {
   state = {
         username: "",
         password: ""

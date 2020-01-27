@@ -8,7 +8,7 @@ import PrivateRoute from "./components/common/PrivateRoute";
 import { Provider } from 'react-redux';
 import store from "./store";
 import { loadUser } from './actions/auth';
-import AuthProvider from "./context/authprovider";
+// import AuthProvider from "./context/authprovider";
 import Reset from "./components/accounts/reset";
 
     class App extends Component {
@@ -18,7 +18,7 @@ import Reset from "./components/accounts/reset";
 
       render(){
         return(
-        <AuthProvider>
+        // <AuthProvider>
           <Provider store={store}>
             <Router>
               <Header/>
@@ -30,7 +30,7 @@ import Reset from "./components/accounts/reset";
                 </Switch>
             </Router>
           </Provider>
-        </AuthProvider>
+        // </AuthProvider>
       );
       }
     }
