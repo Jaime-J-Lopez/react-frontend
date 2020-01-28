@@ -42,36 +42,40 @@ export class Register extends Component {
     };
 
     renderGroupOptions() {
-      if(!this.props.isAuthenticated || this.state.groupName === "member") {
-        return this.state.groupList.slice(0, 1).map(group => (
+      // if(!this.props.isAuthenticated || this.state.groupName === "member") {
+      //   return this.state.groupList.slice(0, 1).map(group => (
+      //     <option key={group.id} value={group.id}>{group.name}</option>
+      //   ));
+      // }
+      // else if(this.state.groupName === "branch.staff") {
+      //   return this.state.groupList.slice(0, 2).map(group => (
+      //     <option key={group.id} value={group.id}>{group.name}</option>
+      //   ));
+      // }
+      // else if(this.state.groupName === "branch.admin") {
+      //   return this.state.groupList.slice(0, 3).map(group => (
+      //     <option key={group.id} value={group.id}>{group.name}</option>
+      //   ));
+      // }
+      // else if(this.state.groupName === "branch.staff") {
+      //   return this.state.groupList.slice(0, 4).map(group => (
+      //     <option key={group.id} value={group.id}>{group.name}</option>
+      //   ));
+      // }
+      // // else {
+      //   return this.state.groupList.map(group => (
+      //     <option key={group.id} value={group.id}>{group.name}</option>
+      //   ));
+      // }
+     return this.state.groupList.map(group => (
           <option key={group.id} value={group.id}>{group.name}</option>
         ));
-      }
-      else if(this.state.groupName === "branch.staff") {
-        return this.state.groupList.slice(0, 2).map(group => (
-          <option key={group.id} value={group.id}>{group.name}</option>
-        ));
-      }
-      else if(this.state.groupName === "branch.admin") {
-        return this.state.groupList.slice(0, 3).map(group => (
-          <option key={group.id} value={group.id}>{group.name}</option>
-        ));
-      }
-      else if(this.state.groupName === "branch.staff") {
-        return this.state.groupList.slice(0, 4).map(group => (
-          <option key={group.id} value={group.id}>{group.name}</option>
-        ));
-      }
-      else {
-        return this.state.groupList.map(group => (
-          <option key={group.id} value={group.id}>{group.name}</option>
-        ));
-      }
     };
+
 
     handleChange = e => {
       const { value } = e.target;
-      this.setState({ groups: [value]});
+      this.setState({ groups: [parseInt(value)]})
     };
 
     onSubmit = e => {
