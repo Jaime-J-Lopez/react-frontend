@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import Modal from "./Modal";
 import axios from "axios";
-
+import { connect } from 'react-redux'
+// import mapStateToProps from "react-redux/lib/connect/mapStateToProps";
 
 // import { HashRouter as Router, Route, } from "react-router-dom";
 
@@ -11,9 +12,8 @@ import axios from "axios";
         this.state = {
           viewCompleted: false,
           activeItem: {
-            title: "",
-            description: "",
-            completed: false
+            name: "",
+            balance: ""
           },
           todoList: []
         };
@@ -22,11 +22,23 @@ import axios from "axios";
         this.refreshList();
       }
       refreshList = () => {
-        axios
-          .get("https://django-react-drf.herokuapp.com/api/bank/")
-          .then(res => this.setState({ todoList: res.data }))
-          .catch(err => console.log(err));
+        const token = this.props.auth.token;
+         const config = {
+           headers: {
+             'Authorization': `Token ${token}`
+           }
       };
+        axios
+          .get("http://127.0.0.1:8000/account/", config)
+          .then(res => {
+            this.setState({ todoList: res.data });
+            console.log(this.state.todoList);
+          })
+          .catch(err => console.log(err));
+
+      };
+
+
       displayCompleted = status => {
         if (status) {
           return this.setState({ viewCompleted: true });
@@ -52,10 +64,8 @@ import axios from "axios";
         );
       };
       renderItems = () => {
-        const { viewCompleted } = this.state;
-        const newItems = this.state.todoList.filter(
-          item => item.completed === viewCompleted
-        );
+        const newItems=this.state.todoList;
+
         return newItems.map(item => (
           <li
             key={item.id}
@@ -65,9 +75,9 @@ import axios from "axios";
               className={`todo-title mr-2 ${
                 this.state.viewCompleted ? "completed-todo" : ""
               }`}
-              title={item.description}
+              title={item.name}
             >
-              {item.title}
+              {item.name} | balance: ${item.balance}
             </span>
             <span>
               <button
@@ -144,4 +154,9 @@ import axios from "axios";
         );
       }
     }
-    export default Branch;
+const mapStateToProps = state => ({
+  auth: state.auth,
+  accounts: state.accounts
+});
+export default connect(
+mapStateToProps,)(Branch);
