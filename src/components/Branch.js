@@ -32,7 +32,6 @@ import { connect } from 'react-redux'
           .get("http://127.0.0.1:8000/account/", config)
           .then(res => {
             this.setState({ todoList: res.data });
-            console.log(this.state.todoList);
           })
           .catch(err => console.log(err));
 
